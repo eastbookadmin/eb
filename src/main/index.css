@@ -1,0 +1,39 @@
+h2 {
+  font-size: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+p {
+  font-size: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.contents-list {
+  display: flex;
+  background-color: lightgray;
+  align-items: center;
+}
+
+.content_card {
+  width: 250px;
+  margin: 8px;
+  background-color: white;
+}
+
+.contents_media {
+  width: 250px;
+}
+
+.author_company {
+  height: 16px;
+}
+
+.post_footer_icon {
+  height: 16px;
+}
+
+.post_footer_info {
+  font-size: 12px;
+}
