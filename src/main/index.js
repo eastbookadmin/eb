@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CardContents = function () {
   const [company_db, setCompany_db] = React.useState([]);
@@ -19,30 +20,32 @@ const CardContents = function () {
   }, []);
 
   return (
-    <div className="contents-list">
+    <div className="contents_list">
       {company_db.map(function (content, index) {
         return (
           <div className="content_card">
-            <h2>{content.company_name}</h2>
-            <p>{content.about}</p>
-            <img
-              className="contents_media"
-              src="images/icons/img_thumb@2x.png"
-            />
-            <img className="author_company" src="images/logo/wato.jpg" />
-            <span>{content.author_company}</span>
-            <br />
-            <img
-              className="post_footer_icon"
-              src="images/icons/ic_count_save_12px.svg"
-            />
-            <span className="post_footer_info">saved_num</span>
-            <img
-              className="post_footer_icon"
-              src="images/icons/ic_count_comment_12px.svg"
-            />
-            <span className="post_footer_info">comment_num</span>
-            <span className="post_footer_info">date</span>
+            <Link className="content-link" to={`/contents/${index}`}>
+              <h2>{content.company_name}</h2>
+              <p>{content.about}</p>
+              <img
+                className="contents_media"
+                src="images/icons/img_thumb@2x.png"
+              />
+              <img className="author_company" src="images/logo/wato.jpg" />
+              <span>{content.author_company}</span>
+              <br />
+              <img
+                className="post_footer_icon"
+                src="images/icons/ic_count_save_12px.svg"
+              />
+              <span className="post_footer_info">saved_num</span>
+              <img
+                className="post_footer_icon"
+                src="images/icons/ic_count_comment_12px.svg"
+              />
+              <span className="post_footer_info">comment_num</span>
+              <span className="post_footer_info">date</span>
+            </Link>
           </div>
         );
       })}

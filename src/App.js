@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CardContents from "./main/index";
+import { Switch, Route } from "react-router-dom";
+import UploadPage from "./upload";
+import ContentPage from "./content";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route exact={true} path="/">
+          <CardContents />
+        </Route>
+        <Route exact={true} path="/contents/:id">
+          <ContentPage />
+        </Route>
+        <Route exact={true} path="/upload">
+          <UploadPage />
+        </Route>
+      </Switch>
     </div>
   );
 }

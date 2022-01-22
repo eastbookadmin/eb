@@ -10,7 +10,7 @@ p {
   margin-right: 8px;
 }
 
-.contents-list {
+.contents_list {
   display: flex;
   background-color: lightgray;
   align-items: center;
@@ -36,4 +36,9 @@ p {
 
 .post_footer_info {
   font-size: 12px;
+}
+
+.content-link {
+  color: inherit;
+  text-decoration: none;
 }

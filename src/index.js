@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import CardContents from "./main/index";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CardContents />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
+
   document.getElementById("root")
 );
 
