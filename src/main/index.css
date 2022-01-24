@@ -14,16 +14,18 @@ p {
   display: flex;
   background-color: lightgray;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .content_card {
-  width: 250px;
-  margin: 8px;
+  width: 320px;
+  margin: 10px;
   background-color: white;
 }
 
 .contents_media {
-  width: 250px;
+  width: 320px;
 }
 
 .author_company {

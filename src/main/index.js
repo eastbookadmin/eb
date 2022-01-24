@@ -24,7 +24,7 @@ const CardContents = function () {
       {company_db.map(function (content, index) {
         return (
           <div className="content_card">
-            <Link className="content-link" to={`/contents/${index}`}>
+            <Link className="content-link" to={`/contents/${content.id}`}>
               <h2>{content.company_name}</h2>
               <p>{content.about}</p>
               <img
