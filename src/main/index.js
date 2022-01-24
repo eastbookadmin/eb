@@ -18,6 +18,7 @@ const CardContents = function () {
         console.error("error :", error);
       });
   }, []);
+
   return (
     <div className="contents_list">
       {company_db.map(function (content, index) {
